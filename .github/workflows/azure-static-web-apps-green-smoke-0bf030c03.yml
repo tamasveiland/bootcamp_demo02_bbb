@@ -58,6 +58,15 @@ jobs:
         path: ./package
     - name: Install M365 CLI
       run: npm install -q @pnp/office365-cli
+    - name: Office 365 CLI Run Script
+      uses: pnp/action-cli-runscript@v1.0.0
+      with:
+        # Relative path of the script in your repo.
+        O365_CLI_SCRIPT_PATH: '' # optional
+        # Office 365 CLI Script
+        # O365_CLI_SCRIPT: # optional
+        # Used only with O365_CLI_SCRIPT. If true the assumption is the script passed in O365_CLI_SCRIPT will be a PowerShell script, otherwise the assumption is bash script. Default is false
+        IS_POWERSHELL: false # optional
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
