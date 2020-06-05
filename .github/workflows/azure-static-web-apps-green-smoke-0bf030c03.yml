@@ -53,9 +53,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
-        name: App # optional
+        name: App Manifest # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: ./dist
+        path: ./package
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
