@@ -12,7 +12,7 @@ on:
 env:
   APPLICATION_ID: '392df650-a705-11ea-9f5d-61fe147bebd6'
   PACKAGE_NAME: 'seconddemoapp'
-  VERSION: '0.0.1'
+  VERSION: '0.0.2'
   HOSTNAME: 'green-smoke-0bf030c03.azurestaticapps.net'
 
 jobs:
@@ -49,7 +49,7 @@ jobs:
         node-version: 10.x
     - run: npm ci
     - run: gulp manifest
-    - name: Upload a Build Artifact - App
+    - name: Upload a Build Artifact - Teams App
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
