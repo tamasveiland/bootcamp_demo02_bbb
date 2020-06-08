@@ -12,7 +12,7 @@ on:
 env:
   APPLICATION_ID: '392df650-a705-11ea-9f5d-61fe147bebd6'
   PACKAGE_NAME: 'seconddemoapp'
-  VERSION: '0.0.2'
+  VERSION: '0.0.3'
   HOSTNAME: 'green-smoke-0bf030c03.azurestaticapps.net'
 
 jobs:
