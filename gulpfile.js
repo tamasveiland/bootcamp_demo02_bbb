@@ -253,7 +253,7 @@ task('copy-web-config', function () {
  */
 task('copy-node-modules', function () {
     return src('./node_modules/**/*.*')
-        .pipe(dest('./dist'));
+        .pipe(dest('./dist/node_modules'));
 });
 
 /**

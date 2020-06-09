@@ -58,13 +58,13 @@ jobs:
         name: App Manifest # optional
         # A file, directory or wildcard pattern that describes what to upload
         path: ./package
-    - name: Upload a Build Artifact - App
-      uses: actions/upload-artifact@v2
-      with:
-        # Artifact name
-        name: App # optional
-        # A file, directory or wildcard pattern that describes what to upload
-        path: ./dist
+    #- name: Upload a Build Artifact - App
+    #  uses: actions/upload-artifact@v2
+    #  with:
+    #    # Artifact name
+    #    name: App # optional
+    #    # A file, directory or wildcard pattern that describes what to upload
+    #    path: ./dist
     #- name: Install M365 CLI
     #  run: npm install -q @pnp/office365-cli
     - name: Office 365 CLI Login
