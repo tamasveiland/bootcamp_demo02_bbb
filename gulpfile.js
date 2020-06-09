@@ -249,9 +249,17 @@ task('copy-web-config', function () {
  */
 
 /**
+ * Copy web.config to dist folder
+ */
+task('copy-node-modules', function () {
+    return src('./node_modules')
+        .pipe(dest('./dist'));
+});
+
+/**
  * Build task, that uses webpack and injects scripts into pages
  */
-task('build', series('webpack', 'styles', 'static:copy', 'static:inject'));
+task('build', series('webpack', 'styles', 'static:copy', 'static:inject', 'copy-node-modules'));
 
 /**
  * Replace parameters in the manifest
