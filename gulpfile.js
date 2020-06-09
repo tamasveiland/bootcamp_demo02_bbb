@@ -240,7 +240,7 @@ task('styles', styles);
  * Copy web.config to dist folder
  */
 task('copy-web-config', function () {
-    src('./src/app/web/web.config')
+    return src('./src/app/web/web.config')
         .pipe(dest('./dist'));
 });
 
