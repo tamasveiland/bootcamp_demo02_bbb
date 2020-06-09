@@ -13,7 +13,7 @@ env:
   APPLICATION_ID: '392df650-a705-11ea-9f5d-61fe147bebd6'
   PACKAGE_NAME: 'seconddemoapp'
   VERSION: '0.0.3'
-  HOSTNAME: 'green-smoke-0bf030c03.azurestaticapps.net'
+  HOSTNAME: 'bcdemo02bbb.azurewebsites.net'
 
 jobs:
   build_and_deploy_job:
@@ -93,7 +93,7 @@ jobs:
         # Enter an existing Slot other than the Production slot
         #slot-name: # optional, default is production
         # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-        package: './dist' # optional, default is .
+        package: './dist/web' # optional, default is .
         # Enter the start up command. For ex. dotnet run or dotnet run
         #startup-command: # optional
 
