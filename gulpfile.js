@@ -251,7 +251,7 @@ task('copy-web-config', function () {
 /**
  * Build task, that uses webpack and injects scripts into pages
  */
-task('build', series('webpack', 'styles', 'static:copy', 'static:inject', 'copy-web-config'));
+task('build', series('webpack', 'styles', 'static:copy', 'static:inject'));
 
 /**
  * Replace parameters in the manifest
