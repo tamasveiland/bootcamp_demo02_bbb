@@ -13,7 +13,7 @@ env:
   APPLICATION_ID: '392df650-a705-11ea-9f5d-61fe147bebd6'
   PACKAGE_NAME: 'seconddemoapp'
   VERSION: '0.0.3'
-  HOSTNAME: 'bcdemo02bbb.scm.azurewebsites.net/wwwroot'
+  HOSTNAME: 'bcdemo02bbb.azurewebsites.net/wwwroot'
 
 jobs:
   build_and_deploy_job:
