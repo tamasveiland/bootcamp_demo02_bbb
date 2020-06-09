@@ -240,7 +240,7 @@ task('styles', styles);
  * Copy web.config to dist folder
  */
 task('copy-web-config', function () {
-    gulp.src('./src/app/web/web.config')
+    src('./src/app/web/web.config')
         .pipe(dest('./dist'));
 });
 
