@@ -252,7 +252,7 @@ task('copy-web-config', function () {
  * Copy web.config to dist folder
  */
 task('copy-node-modules', function () {
-    return src('./node_modules')
+    return src('./node_modules/**/*.*')
         .pipe(dest('./dist'));
 });
 
