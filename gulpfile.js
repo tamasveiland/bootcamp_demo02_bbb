@@ -241,9 +241,12 @@ task('styles', styles);
  */
 task('copy-web-config', function () {
     return src('./src/app/web/web.config')
-        .pipe(dest('./dist/web'))
-        .pipe(dest('./dist/web/bootCamp02BbbTab'));
+        .pipe(dest('./dist'));
 });
+/**
+ *         .pipe(dest('./dist/web'))
+        .pipe(dest('./dist/web/bootCamp02BbbTab'));
+ */
 
 /**
  * Build task, that uses webpack and injects scripts into pages
