@@ -237,6 +237,14 @@ task('static:inject', injectSources);
 task('styles', styles);
 
 /**
+ * Copy web.config to dist folder
+ */
+task('copy-web-config', function () {
+    gulp.src('./src/app/web/web.config')
+        .pipe(dest('./dist'));
+});
+
+/**
  * Build task, that uses webpack and injects scripts into pages
  */
 task('build', series('webpack', 'styles', 'static:copy', 'static:inject', 'copy-web-config'));
@@ -380,8 +388,3 @@ task('serve', series('nuke', 'build', 'nodemon', 'watch'));
 task('manifest', series('validate-manifest', 'zip'));
 
 task('ngrok-serve', series('start-ngrok', 'manifest', 'serve'));
-
-task('copy-web-config', function () {
-    gulp.src('./src/app/web/web.config')
-        .pipe(dest('./dist'));
-});
