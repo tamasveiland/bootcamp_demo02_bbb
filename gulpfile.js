@@ -241,7 +241,8 @@ task('styles', styles);
  */
 task('copy-web-config', function () {
     return src('./src/app/web/web.config')
-        .pipe(dest('./dist/web'));
+        .pipe(dest('./dist/web'))
+        .pipe(dest('./dist/web/bootCamp02BbbTab'));
 });
 
 /**
